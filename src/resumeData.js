@@ -1,5 +1,5 @@
 let resumeData = {
-  name: "Trần Minh Đạt",
+  name: "Tran Minh Dat",
   role: "Frontend Developer and DevOps",
   linkedinId: "minhdat-tran97",
   skypeid: "minhdat.tran97",
@@ -18,8 +18,80 @@ let resumeData = {
     },
     {
       name: "skype",
-      url: "http://twitter.com/rbhatia46",
-      className: "fa fa-twitter"
+      url: "https://join.skype.com/invite/mYNf0bKIrV0r",
+      className: "fa fa-skype"
+    }
+  ],
+  aboutme:
+    "I am currently a pre-final year student at The LNM Institute of Information Technology and pursuing my B.Tech from here. I am a self taught Full Stack Web Developer, currently diving deeper into Machine Learning. I believe that to be successful in life, one needs to be obsessive with their dreams and keep working towards them.",
+  address: "VietNam",
+  education: [
+    {
+      UniversityName: "VNUHCM University of Science",
+      specialization: "Software Engineering",
+      MonthOfPassing: "Oct",
+      YearOfPassing: "2019",
+      Achievements: "Some Achievements"
+    }
+  ],
+  work: [
+    {
+      CompanyName: "Some Company",
+      specialization: "Some specialization",
+      MonthOfLeaving: "Jan",
+      YearOfLeaving: "2018",
+      Achievements: "Some Achievements"
+    },
+    {
+      CompanyName: "Some Company",
+      specialization: "Some specialization",
+      MonthOfLeaving: "Jan",
+      YearOfLeaving: "2018",
+      Achievements: "Some Achievements"
+    }
+  ],
+  skillsDescription: "Your skills here",
+  skills: [
+    {
+      skillname: "HTML5"
+    },
+    {
+      skillname: "CSS"
+    },
+    {
+      skillname: "Reactjs"
+    }
+  ],
+  portfolio: [
+    {
+      name: "project1",
+      description: "mobileapp",
+      imgurl: "images/portfolio/phone.jpg"
+    },
+    {
+      name: "project2",
+      description: "mobileapp",
+      imgurl: "images/portfolio/project.jpg"
+    },
+    {
+      name: "project3",
+      description: "mobileapp",
+      imgurl: "images/portfolio/project2.png"
+    },
+    {
+      name: "project4",
+      description: "mobileapp",
+      imgurl: "images/portfolio/phone.jpg"
+    }
+  ],
+  testimonials: [
+    {
+      description: "This is a sample testimonial",
+      name: "Some technical guy"
+    },
+    {
+      description: "This is a sample testimonial",
+      name: "Some technical guy"
     }
   ]
 };
