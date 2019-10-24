@@ -4,7 +4,7 @@ let resumeData = {
   linkedinId: "minhdat-tran97",
   skypeid: "minhdat.tran97",
   roleDescription:
-    "I like dabbling in various parts of frontend development and like to learn about new technologies, write technical articles or simply play games in my free time.",
+    " I like dabbling in various parts of frontend and system development and like to learn about new technologies, watch tech papers or simply play games in my free time.",
   socialLinks: [
     {
       name: "linkedin",
@@ -23,15 +23,14 @@ let resumeData = {
     }
   ],
   aboutme:
-    "I am currently a pre-final year student at The LNM Institute of Information Technology and pursuing my B.Tech from here. I am a self taught Full Stack Web Developer, currently diving deeper into Machine Learning. I believe that to be successful in life, one needs to be obsessive with their dreams and keep working towards them.",
+    "I just graduated from University of Science. I am a self taught Full Stack Web Developer, currently diving deeper into DevOps. I believe that to be successful in life, one needs to be obsessive with their dreams and keep working towards them.",
   address: "VietNam",
   education: [
     {
       UniversityName: "VNUHCM University of Science",
       specialization: "Software Engineering",
       MonthOfPassing: "Oct",
-      YearOfPassing: "2019",
-      Achievements: "Some Achievements"
+      YearOfPassing: "2019"
     }
   ],
   work: [
@@ -53,35 +52,42 @@ let resumeData = {
   skillsDescription: "Your skills here",
   skills: [
     {
-      skillname: "HTML5"
+      skillname: "ReactJS"
     },
     {
-      skillname: "CSS"
+      skillname: "HTML + CSS + JS"
     },
     {
-      skillname: "Reactjs"
+      skillname: "Python"
     }
   ],
-  portfolio: [
+  portfolio1: [
     {
-      name: "project1",
-      description: "mobileapp",
-      imgurl: "images/portfolio/phone.jpg"
+      name: "Chatapp",
+      description: "Web App using Socket.IO",
+      imgurl: "images/portfolio/project1.jfif",
+      tech: ["ReactJS", "NodeJS", "MongoDB"],
+      backHeader: "See more!",
+      backText: "A simple real time chat app, front-end use ReactJS, server use NodeJS and database use MongoDB",
+      link: "https://github.com/minhdat97/nodejs-reactjs-chatapp"
     },
     {
-      name: "project2",
-      description: "mobileapp",
-      imgurl: "images/portfolio/project.jpg"
+      name: "login-cookies",
+      description: "Web Application",
+      imgurl: "images/portfolio/react-cover.png",
+      tech: ["ReactJS", "Docker"],
+      backHeader: "See more!",
+      backText: "Login section with cookies saving ",
+      link: "https://github.com/minhdat97/nodejs-reactjs-chatapp"
     },
     {
-      name: "project3",
-      description: "mobileapp",
-      imgurl: "images/portfolio/project2.png"
-    },
-    {
-      name: "project4",
-      description: "mobileapp",
-      imgurl: "images/portfolio/phone.jpg"
+      name: "Django Automation",
+      description: "Web Application",
+      imgurl: "images/portfolio/project2.png",
+      tech: ["Django", "Python", "Terraform", "Ansible"],
+      backHeader: "See more!",
+      backText: "A Hello Django Web was deployed by Terraform and Ansible",
+      link: "https://github.com/minhdat97/django-automation"
     }
   ],
   testimonials: [

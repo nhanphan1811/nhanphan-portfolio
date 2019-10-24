@@ -1,0 +1,45 @@
+.header {
+    height: 90vh;
+    background-image: url(../img/hello-port.jpg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: right;
+    background-size: 50%;
+    background-color: $color-white;
+    position: relative;
+
+    @include respond(tab-port) {
+        background-position: top;
+        background-image: url(../img/hello-small.jpg);
+        background-size: contain;
+        background-size: 90%;
+    }
+    @include respond(phone) {
+        background-size: 100%;
+    }
+    
+    &__text-box {
+        position: absolute;
+        left: 25%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        text-align: right;
+        margin-right: 2rem;
+
+        @include respond(tab-port) {
+            position: absolute;
+            top: 80%;
+            left: 50%;
+            text-align: center;
+            margin-top: 1rem;
+            margin-right: 1rem;
+        }
+
+        @include respond(phone) {
+            position: absolute;
+            top: 65%;
+            left: 50%;
+            text-align: center;
+        }
+    }
+}

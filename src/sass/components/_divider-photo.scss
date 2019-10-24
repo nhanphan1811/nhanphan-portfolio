@@ -1,0 +1,31 @@
+.divider-photo {
+    padding: 20rem 0;
+    
+    height: 50vh;
+    
+    background-size: cover;
+    background-attachment: fixed;
+
+    transform: skewY(-3deg);
+
+    & > * {
+        transform: skewY(3deg);
+    }
+
+    &-1 {
+        background-image: linear-gradient(
+            to right bottom, 
+            rgba($color-primary-light, 0.5), 
+            rgba($color-primary-dark, 0.5)),
+        url(../img/hero-big.jpg);
+        margin-top: 15rem;
+
+        @include respond(tab-land) {
+            background-image: linear-gradient(
+                to right bottom, 
+                rgba($color-primary-light, 0.5), 
+                rgba($color-primary-dark, 0.5)),
+                url(../img/hero-small.jpg);
+            }
+    }
+}
