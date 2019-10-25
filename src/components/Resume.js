@@ -2,7 +2,7 @@
 import React, { Component } from "react";
 
 const ulStyle = {
-  marginLeft: '40px',
+  marginLeft: "40px"
 };
 export default class Resume extends Component {
   render() {
@@ -92,9 +92,9 @@ export default class Resume extends Component {
             <div className="bars">
               <ul className="skills">
                 {resumeData.skills &&
-                  resumeData.skills.map(item => {
+                  resumeData.skills.map((item, key) => {
                     return (
-                      <li>
+                      <li key={key}>
                         <span
                           className={`bar-expand ${item.skillname.toLowerCase()}`}
                         ></span>
