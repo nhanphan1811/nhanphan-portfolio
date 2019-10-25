@@ -17,21 +17,18 @@ export default class About extends Component {
               <div className="columns contact-details">
                 <h2>Contact Details</h2>
                 <p className="address">
-                  <span>Jonathan Doe</span>
+                  <span>Tran Minh Dat</span>
                   <br />
-                  <span>
-                    1600 Amphitheatre Parkway
-                    <br /> Mountain View, CA 94043 US
-                  </span>
+                  <span>39 Cao Lo, Phuong 4, Quan 8, TPHCM</span>
                   <br />
-                  <span>(123)456-7890</span>
+                  <span>079 5550 300</span>
                   <br />
-                  <span>anyone@website.com</span>
+                  <span>minhdat.tran97@gmail.com</span>
                 </p>
               </div>
               <div className="columns download">
                 <p>
-                  <a href="#" className="button">
+                  <a href="https://www.dropbox.com/s/y9hlnmvc8nwfxct/CV_TranMinhDat_SE.pdf?dl=1" className="button">
                     Download Resume
                   </a>
                 </p>

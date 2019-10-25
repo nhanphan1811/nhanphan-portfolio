@@ -186,11 +186,11 @@ body {
 }
 .card__picture--1 {
   background-image: linear-gradient(to right bottom, #fface4, #92024a),
-    url(../img/blacktop.jpg);
+    url(../images/portfolio/project1.jfif);
 }
 .card__picture--2 {
   background-image: linear-gradient(to right bottom, #fface4, #92024a),
-    url(../img/fbfactor.jpg);
+    url(../images/portfolio/react-cover.png);
 }
 .card__picture--3 {
   background-image: linear-gradient(to right bottom, #fface4, #92024a),
@@ -262,6 +262,72 @@ body {
   font-weight: 100;
 }
 
+/* Buttons */
+.btn,
+.btn:link,
+.btn:visited {
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 1.5rem 4rem;
+  display: inline-block;
+  transition: all 0.2s;
+  position: relative;
+  font-size: 2rem;
+  border: none;
+  cursor: pointer;
+}
+
+.btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
+  backface-visibility: hidden;
+}
+.btn:hover::after {
+  transform: scaleX(1.4) scaleY(1.6);
+  opacity: 0;
+}
+
+.btn:active {
+  transform: translateY(-1px);
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
+}
+
+.btn--white {
+  background-color: #fff;
+  color: #000;
+  border-radius: 10rem;
+}
+.btn--white::after {
+  background-color: #fff;
+  border-radius: 100px;
+}
+
+.btn--green {
+  background-color: #f85ac8;
+  color: #fff;
+  border-radius: 10rem;
+}
+.btn--green::after {
+  background-color: #f85ac8;
+  border-radius: 100px;
+}
+
+.btn::after {
+  content: "";
+  display: inline-block;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  transition: all 0.4s;
+}
+
+.btn--animated {
+  animation: moveInBottom 0.5s ease-out 0.75s;
+  animation-fill-mode: backwards;
+}
 
 /* ------------------------------------------------------------------ */
 /* b. Header Styles
@@ -616,17 +682,37 @@ ul#nav li.current a {
   -webkit-animation: wordpress 2s ease;
 }
 .css {
-  width: 90%;
+  width: 60%;
+  -moz-animation: css 2s ease;
+  -webkit-animation: css 2s ease;
+}
+.docker {
+  width: 50%;
+  -moz-animation: css 2s ease;
+  -webkit-animation: css 2s ease;
+}
+.kubernetes {
+  width: 50%;
+  -moz-animation: css 2s ease;
+  -webkit-animation: css 2s ease;
+}
+.python {
+  width: 60%;
+  -moz-animation: css 2s ease;
+  -webkit-animation: css 2s ease;
+}
+.reactjs {
+  width: 80%;
   -moz-animation: css 2s ease;
   -webkit-animation: css 2s ease;
 }
 .html5 {
-  width: 80%;
+  width: 70%;
   -moz-animation: html5 2s ease;
   -webkit-animation: html5 2s ease;
 }
 .jquery {
-  width: 50%;
+  width: 60%;
   -moz-animation: jquery 2s ease;
   -webkit-animation: jquery 2s ease;
 }
@@ -1250,7 +1336,7 @@ call-to-action .button {
   height: auto;
   display: inline-block;
   border-radius: 3px;
-  margin-left: 26%;
+  margin-left: 52%;
 }
 #contact button.submit:hover {
   color: #0d0d0d;

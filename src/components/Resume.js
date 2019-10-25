@@ -1,4 +1,9 @@
+/* eslint-disable react/style-prop-object */
 import React, { Component } from "react";
+
+const ulStyle = {
+  marginLeft: '40px',
+};
 export default class Resume extends Component {
   render() {
     let resumeData = this.props.resumeData;
@@ -50,10 +55,23 @@ export default class Resume extends Component {
                         {item.specialization}
                         <span>&bull;</span>{" "}
                         <em className="date">
+                          {item.MonthOfBegining} {item.YearOfBegining} -{" "}
                           {item.MonthOfLeaving} {item.YearOfLeaving}
                         </em>
                       </p>
-                      <p>{item.Achievements}</p>
+                      <p>
+                        <li>Project: {item.NameOfPrj}</li>
+                        <li>Description: {item.Description}</li>
+                        <li>
+                          Role: <br></br>
+                          <ul style={ulStyle}>
+                            {item.Role.map((element, key) => {
+                              return <li key={key}>{element}</li>;
+                            })}
+                          </ul>
+                        </li>
+                        <li>Technology: {item.Technology.join(" + ")}</li>
+                      </p>
                     </div>
                   </div>
                 );

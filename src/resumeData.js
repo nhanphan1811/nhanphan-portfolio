@@ -35,21 +35,43 @@ let resumeData = {
   ],
   work: [
     {
-      CompanyName: "Some Company",
-      specialization: "Some specialization",
-      MonthOfLeaving: "Jan",
+      CompanyName: "GEEK Up",
+      specialization: "Front-end Developer",
+      MonthOfBegining: "Jun",
+      YearOfBegining: "2018",
+      MonthOfLeaving: "Sep",
       YearOfLeaving: "2018",
-      Achievements: "Some Achievements"
+      NameOfPrj: "Honey Bee",
+      Description: "This is a internal product, it's a website for admin and user role. Admin role can create, edit, delete information of assets and track status of assets. User role can view status and information of assets",
+      Role: ["Write functions about CRUD assets for admin role", "Get data and display it to page for user role"],
+      Technology: ["ReactJS"],
     },
     {
-      CompanyName: "Some Company",
-      specialization: "Some specialization",
+      CompanyName: "FPT Telecome",
+      specialization: "Front-end Developer",
+      MonthOfBegining: "Sep",
+      YearOfBegining: "2018",
       MonthOfLeaving: "Jan",
-      YearOfLeaving: "2018",
-      Achievements: "Some Achievements"
+      YearOfLeaving: "2019",
+      NameOfPrj: "Adsplay",
+      Description: "Advertising management website for admin role",
+      Role: ["Write function to change password", "Write functions to create, edit and delete some modules manage advertisement"],
+      Technology: ["ReactJS"],
+    },
+    {
+      CompanyName: "Graduation Thesis",
+      specialization: "Front-end + System Developer",
+      MonthOfBegining: "Apr",
+      YearOfBegining: "2019",
+      MonthOfLeaving: "Jun",
+      YearOfLeaving: "2019",
+      NameOfPrj: "Thich Di Phuot",
+      Description: " A mobile application (IOS) that supports traveling together",
+      Role: ["Write functions to show maps, directions, show markes, tracking users on map", "Write functions to create, edit, delete trips", "Write functions to edit user's profile", "Deploy server and database to AWS services"],
+      Technology: ["React Native", "Firebase", "AWS Service"],
     }
   ],
-  skillsDescription: "Your skills here",
+  skillsDescription: "The following are my best skills which I believe are applicable to the position I have applied for",
   skills: [
     {
       skillname: "ReactJS"
@@ -59,6 +81,12 @@ let resumeData = {
     },
     {
       skillname: "Python"
+    },
+    {
+      skillname: "Kubernetes"
+    },
+    {
+      skillname: "Docker"
     }
   ],
   portfolio1: [
