@@ -84,14 +84,14 @@ export default class ContactUs extends Component {
             >
               <fieldset>
                 <div>
-                  <label for="contactName">
+                  <label for="name">
                     Name <span class="required">*</span>
                   </label>
                   <input
                     type="text"
                     size="35"
                     id="name"
-                    name="contactName"
+                    name="name"
                     value={this.state.name}
                     onChange={event =>
                       this.setState({ name: event.target.value })
@@ -101,14 +101,14 @@ export default class ContactUs extends Component {
                 </div>
 
                 <div>
-                  <label for="contactEmail">
+                  <label for="email">
                     Email <span class="required">*</span>
                   </label>
                   <input
                     type="text"
                     size="35"
                     id="email"
-                    name="contactEmail"
+                    name="email"
                     value={this.state.email}
                     onChange={event =>
                       this.setState({ email: event.target.value })
@@ -118,14 +118,14 @@ export default class ContactUs extends Component {
                 </div>
 
                 <div>
-                  <label for="contactSubject">
+                  <label for="subject">
                     Subject <span class="required">*</span>
                   </label>
                   <input
                     type="text"
                     size="35"
                     id="subject"
-                    name="contactSubject"
+                    name="subject"
                     value={this.state.subject}
                     onChange={event =>
                       this.setState({ subject: event.target.value })
@@ -135,12 +135,12 @@ export default class ContactUs extends Component {
                 </div>
 
                 <div>
-                  <label for="contactMessage">Message</label>
+                  <label for="message">Message</label>
                   <textarea
                     cols="50"
                     rows="15"
                     id="message"
-                    name="contactMessage"
+                    name="message"
                     value={this.state.message}
                     onChange={event =>
                       this.setState({ message: event.target.value })

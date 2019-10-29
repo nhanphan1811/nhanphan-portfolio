@@ -115,7 +115,7 @@ let resumeData = {
       tech: ["Django", "Python", "Terraform", "Ansible"],
       backHeader: "See more!",
       backText: "A Hello Django Web was deployed by Terraform and Ansible",
-      link: "https://github.com/minhdat97/django-automation"
+      link: "https://github.com/minhdat97/django-automation" 
     }
   ],
   testimonials: [
