@@ -1,5 +1,12 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import React, { Component } from "react";
+import {
+  FaDownload,
+  FaUser,
+  FaLocationArrow,
+  FaMobile,
+  FaEnvelope
+} from "react-icons/fa";
 export default class About extends Component {
   render() {
     let resumeData = this.props.resumeData;
@@ -17,19 +24,30 @@ export default class About extends Component {
               <div className="columns contact-details">
                 <h2>Contact Details</h2>
                 <p className="address">
-                  <span>Tran Minh Dat</span>
+                  <span>
+                    <FaUser />&emsp; Tran Minh Dat
+                  </span>
                   <br />
-                  <span>39 Cao Lo, Phuong 4, Quan 8, TPHCM</span>
+                  <span>
+                    <FaLocationArrow />&emsp; 39 Cao Lo, Phuong 4, Quan 8, TPHCM
+                  </span>
                   <br />
-                  <span>079 5550 300</span>
+                  <span>
+                    <FaMobile />&emsp; 079 5550 300
+                  </span>
                   <br />
-                  <span>minhdat.tran97@gmail.com</span>
+                  <span>
+                    <FaEnvelope />&emsp; minhdat.tran97@gmail.com
+                  </span>
                 </p>
               </div>
               <div className="columns download">
                 <p>
-                  <a href="https://www.dropbox.com/s/y9hlnmvc8nwfxct/CV_TranMinhDat_SE.pdf?dl=1" className="button">
-                    Download Resume
+                  <a
+                    href="https://www.dropbox.com/s/y9hlnmvc8nwfxct/CV_TranMinhDat_SE.pdf?dl=1"
+                    className="button"
+                  >
+                    <FaDownload /> Download Resume
                   </a>
                 </p>
               </div>

@@ -1,8 +1,6 @@
 let resumeData = {
   name: "Tran Minh Dat",
-  role: "Frontend Developer and DevOps",
-  linkedinId: "minhdat-tran97",
-  skypeid: "minhdat.tran97",
+  role: "Frontend Developer, Backend Developer and DevOps",
   roleDescription:
     " I like dabbling in various parts of frontend and system development and like to learn about new technologies, watch tech papers or simply play games in my free time.",
   socialLinks: [
