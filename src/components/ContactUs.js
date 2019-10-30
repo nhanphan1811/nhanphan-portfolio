@@ -53,7 +53,11 @@ export default class ContactUs extends Component {
       headers: { "X-Requested-With": "XMLHttpRequest" }
     };
     axios
-      .post("https://portfolio-contact-38216.firebaseio.com/contact.json", form, options)
+      .post(
+        "https://portfolio-contact-38216.firebaseio.com/contact.json",
+        form,
+        options
+      )
       .then(response => console.log(response))
       .catch(error => console.log(error));
 
@@ -69,29 +73,23 @@ export default class ContactUs extends Component {
     return (
       <div>
         <section id="contact">
-          <div class="row section-head">
+          <div className="row section-head">
             <h1>
               <span>Hiring Me</span>
             </h1>
           </div>
           <div className="row">
-            <form
-              action=""
-              method="post"
-              id="contactForm"
-              name="contactForm"
-              onSubmit={this.handleSubmit}
-            >
+            <form action="#" method="post" id="contactForm" name="contactForm">
               <fieldset>
                 <div>
-                  <label for="name">
+                  <label for="contactName">
                     Name <span class="required">*</span>
                   </label>
                   <input
                     type="text"
                     size="35"
-                    id="name"
-                    name="name"
+                    id="contactName"
+                    name="contactName"
                     value={this.state.name}
                     onChange={event =>
                       this.setState({ name: event.target.value })
@@ -101,14 +99,14 @@ export default class ContactUs extends Component {
                 </div>
 
                 <div>
-                  <label for="email">
+                  <label for="contactEmail">
                     Email <span class="required">*</span>
                   </label>
                   <input
                     type="text"
                     size="35"
-                    id="email"
-                    name="email"
+                    id="contactEmail"
+                    name="contactEmail"
                     value={this.state.email}
                     onChange={event =>
                       this.setState({ email: event.target.value })
@@ -118,14 +116,14 @@ export default class ContactUs extends Component {
                 </div>
 
                 <div>
-                  <label for="subject">
+                  <label for="contactSubject">
                     Subject <span class="required">*</span>
                   </label>
                   <input
                     type="text"
                     size="35"
-                    id="subject"
-                    name="subject"
+                    id="contactSubject"
+                    name="contactSubject"
                     value={this.state.subject}
                     onChange={event =>
                       this.setState({ subject: event.target.value })
@@ -135,12 +133,12 @@ export default class ContactUs extends Component {
                 </div>
 
                 <div>
-                  <label for="message">Message</label>
+                  <label for="contactMessage">Message</label>
                   <textarea
                     cols="50"
                     rows="15"
-                    id="message"
-                    name="message"
+                    id="contactMessage"
+                    name="contactMessage"
                     value={this.state.message}
                     onChange={event =>
                       this.setState({ message: event.target.value })

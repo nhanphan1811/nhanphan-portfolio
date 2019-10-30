@@ -34,7 +34,7 @@ body {
   display: inline-block;
   background-image: linear-gradient(to right, #f85ac8, #92024a);
   -webkit-background-clip: text;
-  color: transparent;
+  color: black;
   letter-spacing: 2px;
   transition: all 0.2s;
 }
@@ -208,6 +208,7 @@ body {
   width: 100%;
 }
 .card__heading-span {
+  border-radius: 50px;
   padding: 1rem 1.5rem;
   -webkit-box-decoration-break: clone;
   box-decoration-break: clone;
