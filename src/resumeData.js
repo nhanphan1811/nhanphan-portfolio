@@ -72,7 +72,7 @@ let resumeData = {
   skillsDescription: "The following are my best skills which I believe are applicable to the position I have applied for",
   skills: [
     {
-      skillname: "ReactJS"
+      skillname: "ReactJS + React Native"
     },
     {
       skillname: "HTML + CSS + JS"
