@@ -7,7 +7,7 @@ resource "aws_instance" "master" {
   ami                    = join("", data.aws_ami.default.*.image_id)
   instance_type          = var.instance_type
   key_name               = aws_key_pair.default.id
-  user_data              = file("${var.bootstrap_path}")
+  user_data              = file("install-docker.sh")
   vpc_security_group_ids = [aws_security_group.default.id]
   subnet_id              = aws_subnet.default.id
 
@@ -23,15 +23,12 @@ resource "aws_instance" "master" {
     # The connection will use the local SSH agent for authentication
     inline = [
       "echo Successfully connected",
-      "sleep 50",
-      "sudo apt-add-repository ppa:ansible/ansible -y",
-      "sudo apt-get update -y",
-      "sudo apt-get install ansible -y",
-      "echo ansible installed...",
-      "echo --------------------------------------------",
-      "sleep 50",
-      "export ANSIBLE_HOST_KEY_CHECKING=False",
-      "ansible-playbook -u ubuntu --private-key ${var.private-key} -i ansible/hosts ansible/playbook.yml"
+      "sudo apt update -y",
+      "sudo apt install software-properties-common -y",
+      "sudo add-apt-repository ppa:deadsnakes/ppa -y",
+      "sudo apt install python3.8 -y",
+      "python3.8 --version",
+      "echo installed python3.8..."
     ]
   }
 
@@ -43,9 +40,9 @@ resource "aws_instance" "master" {
   # #   command = "export ANSIBLE_HOST_KEY_CHECKING=False"
   # # }
 
-  # provisioner "local-exec" {
-  #   command = "ansible-playbook -u ubuntu --private-key ${var.private-key} -i ansible/hosts ansible/playbook.yml"
-  # }
+  provisioner "local-exec" {
+    command = "sleep 50 ; export ANSIBLE_HOST_KEY_CHECKING=False ; ansible-playbook -u ubuntu --private-key ${var.private-key} -i ansible/inventory/ec2.py ansible/playbook.yml"
+  }
 
   tags = {
     Name = "master"
@@ -61,7 +58,7 @@ resource "aws_instance" "worker1" {
   subnet_id              = aws_subnet.default.id
 
   tags = {
-    Name = "worker 1"
+    Name = "workers"
   }
 }
 
@@ -74,6 +71,6 @@ resource "aws_instance" "worker2" {
   subnet_id              = aws_subnet.default.id
 
   tags = {
-    Name = "worker 2"
+    Name = "workers"
   }
 }

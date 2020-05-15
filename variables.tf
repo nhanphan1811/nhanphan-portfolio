@@ -1,6 +1,6 @@
 variable "aws_region" {
   description = "AWS region on which we will setup the swarm cluster"
-  default     = "us-east-1"
+  default     = "ap-southeast-1"
 }
 
 # variable "ami" {
@@ -15,7 +15,7 @@ variable "instance_type" {
 
 variable "key_path" {
   description = "SSH Public Key path"
-  default     = "keys/ssh-key.pub"
+  default     = "~/.ssh/id_rsa.pub"
 }
 
 variable "bootstrap_path" {
@@ -25,7 +25,7 @@ variable "bootstrap_path" {
 
 variable "private-key" {
   description = "SSH private key"
-  default     = "../ssh-key/ssh-key.pem"
+  default     = "~/.ssh/id_rsa"
 }
 
 variable "tags" {

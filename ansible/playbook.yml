@@ -1,6 +1,6 @@
 ---
 - name: Init Swarm Master
-  hosts: masters
+  hosts: tag_Name_master
   become: true
   gather_facts: False
   remote_user: ubuntu
@@ -24,13 +24,13 @@
       debug: var=master_token.stdout
 
 - name: Join Swarm Cluster
-  hosts: workers
+  hosts: tag_Name_workers
   become: true
   remote_user: ubuntu
   gather_facts: False
   vars:
-    token: "{{ hostvars[groups['masters'][0]]['worker_token']['stdout'] }}"
-    master: "{{ hostvars[groups['masters'][0]]['inventory_hostname'] }}"
+    token: "{{ hostvars[groups['tag_Name_master'][0]]['worker_token']['stdout'] }}"
+    master: "{{ hostvars[groups['tag_Name_master'][0]]['inventory_hostname'] }}"
   tasks:
     - name: Join Swarm Cluster as a Worker
       command: docker swarm join --token {{ token }} {{ master }}:2377
@@ -43,7 +43,7 @@
       debug: var=worker.stderr
 
 - name: Deploy on Swarm Cluster
-  hosts: masters
+  hosts: tag_Name_master
   become: true
   gather_facts: False
   remote_user: ubuntu
