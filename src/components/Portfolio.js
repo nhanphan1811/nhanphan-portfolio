@@ -58,7 +58,6 @@ export default class Porfolio extends Component {
                       <div className="card__details">
                         <ul>
                           {item.tech.map((element, key) => {
-                            console.log(element, key);
                             return <li key={key}>{element}</li>;
                           })}
                           <li></li>

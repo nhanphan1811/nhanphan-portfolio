@@ -35,7 +35,6 @@ export default class ContactUs extends Component {
     e.preventDefault();
 
     const { name, email, subject, message } = this.state;
-    console.log(name, email, subject, message);
 
     const errors = validate(name, email, subject, message);
     if (errors.length > 0) {
