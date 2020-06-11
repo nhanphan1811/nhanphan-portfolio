@@ -34,10 +34,9 @@ export default class ContactUs extends Component {
   handleSubmit = e => {
     e.preventDefault();
 
-    const { name, email, subject, message } = this.state;
-    console.log(name, email, subject, message);
+    const { name, email, subject } = this.state;
 
-    const errors = validate(name, email, subject, message);
+    const errors = validate(name, email, subject);
     if (errors.length > 0) {
       this.setState({ errors });
       return;
@@ -82,8 +81,8 @@ export default class ContactUs extends Component {
             <form action="#" method="post" id="contactForm" name="contactForm">
               <fieldset>
                 <div>
-                  <label for="contactName">
-                    Name <span class="required">*</span>
+                  <label htmlFor="contactName">
+                    Name <span className="required">*</span>
                   </label>
                   <input
                     type="text"
@@ -99,8 +98,8 @@ export default class ContactUs extends Component {
                 </div>
 
                 <div>
-                  <label for="contactEmail">
-                    Email <span class="required">*</span>
+                  <label htmlFor="contactEmail">
+                    Email <span className="required">*</span>
                   </label>
                   <input
                     type="text"
@@ -116,8 +115,8 @@ export default class ContactUs extends Component {
                 </div>
 
                 <div>
-                  <label for="contactSubject">
-                    Subject <span class="required">*</span>
+                  <label htmlFor="contactSubject">
+                    Subject <span className="required">*</span>
                   </label>
                   <input
                     type="text"
@@ -133,7 +132,7 @@ export default class ContactUs extends Component {
                 </div>
 
                 <div>
-                  <label for="contactMessage">Message</label>
+                  <label htmlFor="contactMessage">Message</label>
                   <textarea
                     cols="50"
                     rows="15"
@@ -159,7 +158,7 @@ export default class ContactUs extends Component {
 
             <div id="message-warning">Error boy</div>
             <div id="message-success">
-              <i class="fa fa-check">Your message was sent, thank you!</i>
+              <i className="fa fa-check">Your message was sent, thank you!</i>
               <br></br>
             </div>
           </div>

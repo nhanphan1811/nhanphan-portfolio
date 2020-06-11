@@ -148,7 +148,6 @@ jQuery(document).ready(function($) {
         subject: contactSubject,
         message: contactMessage
       };
-      console.log(data);
 
       $.ajax({
         type: "POST",
@@ -156,7 +155,6 @@ jQuery(document).ready(function($) {
         data: JSON.stringify(data),
         success: function(msg) {
           // Message was sent
-          console.log(msg);
           if (msg.name) {
             $("#image-loader").fadeOut();
             $("#message-warning").hide();

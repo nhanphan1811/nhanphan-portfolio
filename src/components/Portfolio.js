@@ -42,7 +42,7 @@ export default class Porfolio extends Component {
           {resumeData.portfolio1 &&
             resumeData.portfolio1.map((item, key) => {
               return (
-                <div className="col-1-of-3">
+                <div key={key} className="col-1-of-3">
                   <div className="card">
                     <div className="card__side card__side--front">
                       <div
@@ -58,7 +58,6 @@ export default class Porfolio extends Component {
                       <div className="card__details">
                         <ul>
                           {item.tech.map((element, key) => {
-                            console.log(element, key);
                             return <li key={key}>{element}</li>;
                           })}
                           <li></li>

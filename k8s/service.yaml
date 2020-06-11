@@ -1,0 +1,14 @@
+kind: Service
+apiVersion: v1
+metadata:
+  name: portfolio
+  namespace: portfolio
+spec:
+  type: NodePort
+  ports:
+    - port: 1337
+      targetPort: 80
+      protocol: TCP
+      nodePort: 30001
+  selector:
+    app: portfolio

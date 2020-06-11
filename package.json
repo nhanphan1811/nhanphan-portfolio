@@ -1,19 +1,15 @@
 {
-  "homepage": "https://minhdat97.github.io/minhdat-portfolio",
   "name": "minhdat-portfolio",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
     "axios": "^0.19.2",
-    "gh-pages": "^2.2.0",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-icons": "^3.10.0",
     "react-scripts": "3.2.0"
   },
   "scripts": {
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",

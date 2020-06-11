@@ -61,7 +61,7 @@
         slider.transitions = !slider.vars.video && !fade && slider.vars.useCSS && (function() {
           var obj = document.createElement('div'),
               props = ['perspectiveProperty', 'WebkitPerspective', 'MozPerspective', 'OPerspective', 'msPerspective'];
-          for (var i in props) {
+          for (var i of props) {
             if ( obj.style[ props[i] ] !== undefined ) {
               slider.pfx = props[i].replace('Perspective','').toLowerCase();
               slider.prop = "-" + slider.pfx + "-transform";
@@ -449,7 +449,7 @@
               // finish the touch by undoing the touch session
               el.removeEventListener('touchmove', onTouchMove, false);
 
-              if (slider.animatingTo === slider.currentSlide && !scrolling && !(dx === null)) {
+              if (slider.animatingTo === slider.currentSlide && !scrolling && (dx !== null)) {
                 var updateDx = (reverse) ? -dx : dx,
                     target = (updateDx > 0) ? slider.getTarget('next') : slider.getTarget('prev');
 
@@ -534,7 +534,7 @@
                 if(!slider){
                     return;
                 }
-                if (slider.animatingTo === slider.currentSlide && !scrolling && !(dx === null)) {
+                if (slider.animatingTo === slider.currentSlide && !scrolling && (dx !== null)) {
                     var updateDx = (reverse) ? -dx : dx,
                         target = (updateDx > 0) ? slider.getTarget('next') : slider.getTarget('prev');
 
@@ -817,7 +817,7 @@
               } else {
                 switch (special) {
                   case "setTotal": return (reverse) ? ((slider.count - 1) - slider.currentSlide + slider.cloneOffset) * pos : (slider.currentSlide + slider.cloneOffset) * pos;
-                  case "setTouch": return (reverse) ? pos : pos;
+                  case "setTouch": return pos;
                   case "jumpEnd": return (reverse) ? pos : slider.count * pos;
                   case "jumpStart": return (reverse) ? slider.count * pos : pos;
                   default: return pos;
