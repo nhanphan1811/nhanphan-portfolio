@@ -42,7 +42,7 @@ export default class Porfolio extends Component {
           {resumeData.portfolio1 &&
             resumeData.portfolio1.map((item, key) => {
               return (
-                <div className="col-1-of-3">
+                <div key={key} className="col-1-of-3">
                   <div className="card">
                     <div className="card__side card__side--front">
                       <div
