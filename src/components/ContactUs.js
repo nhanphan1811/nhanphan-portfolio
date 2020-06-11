@@ -34,7 +34,7 @@ export default class ContactUs extends Component {
   handleSubmit = e => {
     e.preventDefault();
 
-    const { name, email, subject, message } = this.state;
+    const { name, email, subject } = this.state;
 
     const errors = validate(name, email, subject);
     if (errors.length > 0) {
