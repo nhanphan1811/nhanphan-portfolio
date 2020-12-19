@@ -1,5 +1,5 @@
 let resumeData = {
-  name: "Phan Tran Trong Nhan",
+  name: "Tran Minh Dat",
   role: "Frontend Developer, Backend Developer and DevOps",
   roleDescription:
     " I like dabbling in various parts of frontend and system development and like to learn about new technologies, watch tech papers or simply play games in my free time.",
